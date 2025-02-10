@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>7 Little Ninja</title>
+    <title>Snapshots and Notes</title>
+    <link rel="icon" type="image/x-icon" href="https://i.pinimg.com/736x/ea/c4/55/eac45500e2552ffed14e554052912f5b.jpg">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-image: url('https://i.pinimg.com/736x/82/a7/51/82a75160b88a0e72fb34f14db4e42724.jpg');
+            background-repeat: no-repeat;
+            
+            background-size: 100% 100%;
+            
         }
         header {
             background: #000000;
             color: white;
-            padding: 10px 20px;
+            padding: 20px 20px;
             text-align: center;
         }
         nav {
@@ -27,12 +32,18 @@
             text-decoration: none;
         }
         .container {
-            max-width: 800px;
+            max-width: 700px;
             margin: 20px auto;
             padding: 20px;
-            background: white;
+            background: rgba(255, 255, 255, 0.93);
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-style: double;
+        }
+        h1 {
+            color: #9f0000;
+            text-shadow: #333;
+            
         }
         h2 {
             color: #333;
@@ -45,11 +56,14 @@
         .gallery-item {
             position: relative;
             display: inline-block;
+            
         }
         .gallery img {
             width: 100%;
             border-radius: 5px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.6s ease, box-shadow 0.1s ease;
+            box-shadow: 8px 8px 15px rgba(0.1, 0.1, 0.1, 0.1);
+            
         }
         .gallery img:hover {
             transform: scale(1.1);
@@ -71,21 +85,23 @@
         .gallery-item:hover .delete-button {
             display: block;
         }
-        .entry {
+        .entry{ 
             margin-top: 20px;
-            border-top: 1px solid #ccc;
-            padding-top: 10px;
+            border-top: 1px solid #000000;
+            padding-top: 10px;                           
         }
         .entry-form {
             margin-top: 20px;
             margin-bottom: 20px;
+                
         }
         .entry-form input, .entry-form textarea {
             width: 100%;
-            padding: 10px;
+            padding: 5px;
             margin-bottom: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid #000000;
             border-radius: 5px;
+            
         }
         footer {
             text-align: center;
@@ -99,6 +115,7 @@
         @media (max-width: 600px) {
             .gallery img {
                 width: 100%;
+                
             }
         }
     </style>
@@ -106,17 +123,13 @@
 <body>
 
 <header>
-    <h1>7 Little Ninja</h1>
+    <h3>The Digital Journal</h3>
 </header>
 
-<nav>
-    <a href="#gallery">Gallery</a>
-    <a href="#entries">Entries</a>
-</nav>
-
 <div class="container">
-    <h2>7 Little Ninja</h2>
-    <p>Here you can find pictures of my friends and memorable moments.</p>
+    <h1>Snapshots and Notes</h1>
+    <p>Every picture tells a story—these are the moments I'll cherish forever.</p>
+
 
     <h2 id="gallery">Gallery</h2>
     <div class="gallery" id="imageGallery"></div>
@@ -129,7 +142,7 @@
 
     <h2 id="entries">Diary Entries</h2>
     <div id="entryList"></div>
-    <p>Add a New Entry</p>
+    <h2>Add a New Entry</h2>
     <div class="entry-form">
         <input type="text" id="entryTitle" placeholder="Entry Title">
         <textarea id="entryContent" rows="4" placeholder="Write your entry here..."></textarea>
@@ -138,7 +151,7 @@
 </div>
 
 <footer>
-    <p>© 7Little Ninja</p>
+    <p>@ 2025 Artchiveszz</p>
 </footer>
 
 <script>
